@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o main.exe main.cpp'
+                sh 'g++ -o app main.cpp'
             }
         }
         stage('Archive artifact') {
             steps {
-                archiveArtifacts artifacts: 'main.exe'
+                archiveArtifacts artifacts: 'app'
             }
         }
     }
