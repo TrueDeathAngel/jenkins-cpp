@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o app main.cpp'
+                sh 'g++ main.cpp -o app'
             }
         }
         stage('Archive artifact') {
